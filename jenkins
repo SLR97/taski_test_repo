@@ -1,0 +1,23 @@
+node
+{
+
+//Checkout Code stage
+    stage('CheckoutCode'){
+      git credentialsId: 'bucketPass', url: 'https://srihari_shivom@bitbucket.org/personal-testing01/mithun_repo.git'
+     }
+
+//Build
+    stage('Build'){
+      nodejs(nodeJSInstallationName: 'nodejs20.5'){
+        sh "npm install"
+        }
+      }
+
+//Test
+    stage('ExecuteSonarQubeReport') {
+    def secretTextCredential = credentials('sonarToken')
+      nodejs(nodeJSInstallationName: 'nodejs20.5') {
+        sh 'npm run sonar'
+        }
+      }
+}
