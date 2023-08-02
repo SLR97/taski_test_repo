@@ -11,6 +11,8 @@
     "server": "http-server -c-1 -p 9999",
     "start1": "nodemon app.js",
     "start": "node app.js",
+    "build": "SET NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service build",
+    "lint": "SET NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service lint",
     "test": "echo \"Error: no test specified\" && exit 1",
      "sonar": "node sonar-project.js"
   },
@@ -37,19 +39,4 @@
   "author": "Mithun Reddy Lacchannagari",
   "license": "MIT"
 
-  {
-    "name": "your-nodejs-app",
-    "version": "1.0.0",
-    "scripts": {
-      "start": "node app.js", // Replace "app.js" with the main entry file of your application
-      "test": "mocha tests/*.js", // Replace with your actual test command
-      "build": "echo 'Build steps go here'" // Add your build steps here
-    },
-    "dependencies": {
-      // Your dependencies go here
-    },
-    "devDependencies": {
-      // Your devDependencies go here
-    }
-  }
 }
