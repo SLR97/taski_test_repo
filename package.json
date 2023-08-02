@@ -11,7 +11,7 @@
     "server": "http-server -c-1 -p 9999",
     "start1": "nodemon app.js",
     "start": "node app.js",
-    "build": "EXPORT NODE_OPTIONS=--openssl-legacy-provider && node -r dotenv/config vue-cli-service build",
+    "build": "node -r dotenv/config vue-cli-service build",
     "lint": "EXPORT NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service lint",
     "test": "echo \"Error: no test specified\" && exit 1",
      "sonar": "node sonar-project.js"
