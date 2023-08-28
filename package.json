@@ -11,7 +11,7 @@
     "start1": "nodemon app.js",
     "start": "node app.js",
     "test": "echo \"Some big script to build your app\"",
-    "build": "echo \"Some big script to build your app\"",
+    "build": "webpack --config webpack.config.js",
     "sonar": "node sonar-project.js"
   },
   "dependencies": {
@@ -20,7 +20,9 @@
   },
   "devDependencies": {
     "nodemon": "^1.18.9",
-    "sonarqube-scanner": "^2.7.0"
+    "sonarqube-scanner": "^2.7.0",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4"
   },
   "engines": {
     "node": "v10.6.0"
